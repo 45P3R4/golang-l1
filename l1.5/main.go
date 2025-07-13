@@ -19,6 +19,7 @@ func main() {
 	for {
 		select {
 		case <-timeout:
+			close(dataCh)
 			fmt.Println("Exit")
 			return
 
