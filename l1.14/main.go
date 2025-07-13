@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func printType(variable any) {
+func printType(variable any) { //interface{} replaced to any in Go 1.18 standart
 	switch variable.(type) {
 	case int:
 		fmt.Println("int")
@@ -22,7 +22,7 @@ func main() {
 	var number int = 1
 	var text string = "text"
 	var boolean bool = false
-	var structure chan struct{} = make(chan struct{}, 0)
+	var structure chan struct{} = make(chan struct{}) //
 
 	fmt.Println("Recognize type with switch operator:")
 	printType(number)
