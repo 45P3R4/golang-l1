@@ -24,7 +24,7 @@ func work(dataCh chan int, ctx context.Context, wg *sync.WaitGroup) {
 			time.Sleep(500 * time.Millisecond)
 		}
 	}
-	ctx.Done()
+	wg.Done()
 }
 
 func main() {
