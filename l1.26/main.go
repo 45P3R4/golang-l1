@@ -14,11 +14,11 @@ func main() {
 	for _, s := range lowerText {
 		_, ok := counts[string(s)]
 		if ok {
-			fmt.Println("Not unique")
+			fmt.Println("false")
 			return
 		} else {
 			counts[string(s)] = 1
 		}
 	}
-	fmt.Println("Unique")
+	fmt.Println("true")
 }
