@@ -9,13 +9,13 @@ var justString string
 var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 // Possible implementation
-func createHugeString(size int) []rune {
+func createHugeString(size int) string {
 	newStr := make([]rune, size)
 	for i := range newStr {
 		newStr[i] = letterRunes[rand.Intn(len(letterRunes))]
 	}
 
-	return newStr
+	return string(newStr)
 }
 
 func someFunc() {
@@ -25,7 +25,7 @@ func someFunc() {
 		justString = string(v[:size])
 		return
 	}
-	justString = string(v[:100])
+	justString = v[:100]
 }
 
 func main() {
